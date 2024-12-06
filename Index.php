@@ -1,7 +1,7 @@
 <?php
 function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
 {
-    return ($goedeVragen/$totaalVragen)*9 + $normering;
+    return round(($goedeVragen/$totaalVragen)*9 + $normering,precision: 1);
 }
 echo CijferMetNormering(goedeVragen: 38, totaalVragen:71,normering: 1);
 
