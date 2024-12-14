@@ -9,9 +9,11 @@ echo CijferMetNormering(goedeVragen: 38, totaalVragen:71,normering: 1);
 ?>
 <?php if (!empty($_POST)): ?>
     <?php
-    if(isset($_POST["totaalvragen"])
-     echo CijferMetNormering($_POST["goedevragen"],$_POST["totaalvragen"],$POST["normering"]);
+    if(isset($_POST["totaalvragen"])) {
+     echo(CijferMetNormering($_POST["goedevragen"],$_POST["totaalvragen"],$POST["normering"]));
+    }
     ?>
+    
    <form action="" method="POST">
         <input type="text" name = "goedevragen">
         <input type="text" name = "totaalvragen"> 
