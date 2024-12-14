@@ -13,7 +13,7 @@ echo CijferMetNormering(goedeVragen: 38, totaalVragen:71,normering: 1);
      echo(CijferMetNormering($_POST["goedevragen"],$_POST["totaalvragen"],$POST["normering"]));
     }
     ?>
-    
+<?php endif; ?>
    <form action="" method="POST">
         <input type="text" name = "goedevragen">
         <input type="text" name = "totaalvragen"> 
@@ -21,4 +21,4 @@ echo CijferMetNormering(goedeVragen: 38, totaalVragen:71,normering: 1);
         <input type="submit" name="confirm"
                 class="button" value="bevestig" />      
    </form> 
-   <?php endif; ?>
+   <?php  ?>
