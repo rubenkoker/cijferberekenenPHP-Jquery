@@ -15,8 +15,13 @@ function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
     ?>
 <?php endif; ?>
    <form action="" method="POST">
+        aantal vragen goed <br>
         <input type="text" name = "goedevragen">
+        <br>
+        totaal aantal vragen <br>
         <input type="text" name = "totaalvragen"> 
+        <br>
+        de normering<br>
         <input type="text" name=   "normering" >
         <input type="submit" name="confirm"
                 class="button" value="bevestig" />      
