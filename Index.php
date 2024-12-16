@@ -7,6 +7,14 @@ function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
 
 
 ?>
+<style>
+    .content{
+        margin: auto;
+        width: 75%;
+        padding: 10px;
+    }
+</style>
+<div class = "content">
 <?php if (!empty($_POST)): ?>
     <?php
     if(isset($_POST["totaalvragen"])) {
@@ -26,4 +34,5 @@ function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
         <input type="submit" name="confirm"
                 class="button" value="bevestig" />      
    </form> 
+   </div>
    <?php  ?>
