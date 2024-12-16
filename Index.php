@@ -31,6 +31,7 @@ function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
         <br>
         de normering<br>
         <input type="text" name=   "normering" >
+        <br>
         <input type="submit" name="confirm"
                 class="button" value="bevestig" />      
    </form> 
