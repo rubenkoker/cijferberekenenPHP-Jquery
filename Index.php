@@ -17,8 +17,11 @@ function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
 <div class = "content">
 <?php if (!empty($_POST)): ?>
     <?php
-    if(isset($_POST["totaalvragen"])) {
+    if(isset($_POST["totaalvragen"])&& $_POST["normering"]) {
      echo(CijferMetNormering($_POST["goedevragen"],$_POST["totaalvragen"],normering: $_POST["normering"]));
+    }
+    elseif($_POST["totaalvragen"]){
+        echo(CijferMetNormering($_POST["goedevragen"],$_POST["totaalvragen"],0));
     }
     ?>
 <?php endif; ?>
@@ -37,4 +40,4 @@ function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
                 class="button" value="bereken" />      
    </form> 
    </div>
-   <?php  ?>
+   <?php   ?>
