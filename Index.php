@@ -1,7 +1,13 @@
 <?php
-function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
+function CijferMetNormering($goedeVragen,$totaalVragen): float|int
 {
-    return round(($goedeVragen/$totaalVragen)*9 + $normering,precision: 1);
+    $gemiddelde =$goedeVragen/$totaalVragen*10;
+    if($gemiddelde > 6){
+        return round($gemiddelde,1);
+    }
+    else{
+        return round($gemiddelde+((6-$gemiddelde)/6),1);
+    }
 }
 //echo CijferMetNormering(goedeVragen: 38, totaalVragen:71,normering: 1);
 
@@ -17,12 +23,10 @@ function CijferMetNormering($goedeVragen,$totaalVragen, $normering): float|int
 <div class = "content">
 <?php if (!empty($_POST)): ?>
     <?php
-    if(isset($_POST["totaalvragen"])&& $_POST["normering"]) {
-     echo(CijferMetNormering($_POST["goedevragen"],$_POST["totaalvragen"],normering: $_POST["normering"]));
-    }
-    elseif($_POST["totaalvragen"]){
-        echo(CijferMetNormering($_POST["goedevragen"],$_POST["totaalvragen"],0));
-    }
+    
+     echo(CijferMetNormering($_POST["goedevragen"],$_POST["totaalvragen"]));
+    
+   
     ?>
 <?php endif; ?>
    <form action="" method="POST">
