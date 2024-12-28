@@ -36,9 +36,6 @@ function CijferMetNormering($goedeVragen,$totaalVragen): float|int
         totaal aantal vragen <br>
         <input type="text" name = "totaalvragen"> 
         <br>
-        de normering<br>
-        <input type="text" name=   "normering" >
-        <br>
         <br>
         <input type="submit" name="confirm"
                 class="button" value="bereken" />      
